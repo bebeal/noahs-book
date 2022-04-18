@@ -1,6 +1,6 @@
 /* You can add custom styles here. */
 
-// @import "plugins/scrollbars";
+@import "plugins/scrollbars";
 
 button {
     display: inline-block;
@@ -96,4 +96,16 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.custom-date {
+    width: calc(var(--global-space) * 2.5) 0;
+    height: $header-height * 7;
+    margin: 0;
+    font-family: var(--mono-font-stack);
+    letter-spacing: unset;
+}
+
+canvas {
+    font-family: var(--mono-font-stack);
 }
