@@ -1,0 +1,9 @@
+{{- $currentPage := . -}}
+<h2 class="book-brand">
+  <a class="flex align-center collapsed parent {{- if eq $currentPage .Site.GetPage }} active{{ end }}" href="{{ cond (not .Site.Home.File) .Sites.First.Home.RelPermalink .Site.Home.RelPermalink }}">
+    {{- with .Site.Params.BookLogo -}}
+    <img src="{{ . | relURL }}" alt="Logo" />
+    {{- end -}}
+    <span>{{ .Site.Title }}</span>
+  </a>
+</h2>

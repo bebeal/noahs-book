@@ -1,0 +1,58 @@
+:root {
+    --global-font-size: 16px;
+    --global-font-color: #e8e9ed;
+    --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --global-line-height: 1.6em;
+    --display-h1-decoration: 1;
+    --background-color: #343a40;
+    --font-color: #e8e9ed;
+    --invert-font-color: #343a40;
+    --secondary-color: #e9ecef;
+    --tertiary-color: #a3abba;
+    --primary-color: #62c4ff;
+    --error-color: #ff3c74;
+    --progress-bar-background: #3f3f44;
+    --progress-bar-fill: #62c4ff;
+    --code-bg-color: #272822;
+}
+
+.terminal-prompt::after {
+    -webkit-animation: cursor 1s infinite;
+    animation: cursor 1s infinite;
+    width: 10px;
+}
+
+h1::after {
+    bottom: -5px;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: auto;
+}
+
+hr {
+    margin: calc(var(--global-space) * 2) 0;
+}
+
+pre code {
+    overflow-x: auto;
+}
+
+pre {
+    background-color: var(--code-bg-color);
+}
+
+.container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+ul>li::after {
+    content: "\2022";
+    font-weight: bold;
+}
+
+p {
+    margin:0 0 auto;
+}
