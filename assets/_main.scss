@@ -122,8 +122,10 @@ ul.pagination {
     background-color: var(--background-color);
   }
 
-  a:hover {
+  a:hover, label:hover {
     opacity: 1;
+    background-color: var(--primary-color);
+    color: var(--invert-font-color);
   }
 
   a.active::before {
