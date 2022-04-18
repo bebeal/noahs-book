@@ -1,0 +1,29 @@
+{{ if .Inner }}{{ end }}
+{{ $group := "references" }}
+
+<div id="references">
+    <div>
+    {{ .Inner | markdownify }}
+    ## References
+    </div>
+<table>
+    {{- range $index, $reference := .Scratch.Get $group -}}
+        {{ $name := $reference.name }}
+        {{ $link := $reference.link }}
+        <tr valign="top">
+            <td align="right">
+                [<a>{{- $index -}}</a>]
+            </td>
+            <td>
+                <span>{{ $name }}</span> <a id="{{ $name }}">{{ $link }}</a>
+            </td>
+        </tr>
+        <script>
+            var citation = document.getElementById("citation-{{ $name }}");
+            if (citation != null) {
+                citation.appendChild(document.createTextNode("[{{ $index }}]"));
+            }
+        </script>
+    {{- end -}}
+</table>
+</div>

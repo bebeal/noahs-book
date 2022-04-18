@@ -1,0 +1,13 @@
+{{ if .Parent }}
+  {{ $name := .Get 0 }}
+  {{ $link := .Get 1 }}
+  {{ $group := "references" }}
+
+  {{ if not (.Parent.Scratch.Get $group) }}
+    {{ .Parent.Scratch.Set $group slice }}
+  {{ end }}
+
+  {{ .Parent.Scratch.Add $group (dict "name" $name "link" $link ) }}
+{{ else }}
+  {{ errorf "%q: 'reference' shortcode must be inside 'references' shortcode" .Page.Path }}
+{{ end}}
