@@ -4,15 +4,20 @@
 // Webkit
 ::-webkit-scrollbar {
   width: $padding-16;
+  visibility: visible;
+  background: var(--gray-500);
 }
-
+  
 ::-webkit-scrollbar-thumb {
   background: transparent;
+  background: var(--gray-500);
   border-radius: $padding-8;
+  visibility: visible;
 }
 
 :hover::-webkit-scrollbar-thumb {
   background: var(--gray-500);
+  visibility: visible;
 }
 
 // MS

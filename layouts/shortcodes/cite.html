@@ -1,5 +1,9 @@
 {{ $ref := .Get 0 }}
+{{ $link := default "" (.Get 1) }}
 <a class="citation" href="#{{ $ref }}">
+{{ if $link }}
+  {{- $link -}}
+{{ end }}
 <sup id="citation-{{ $ref }}">
 </sup>
 </a>
